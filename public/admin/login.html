@@ -35,9 +35,11 @@
       // 判断用户名和密码是否为空
       if(email.trim().length == 0) {
         alert('请输入邮箱')
+        return
       }
       if(password.trim().length == 0) {
         alert('请输入密码')
+        return 
       }
       // 发送ajax请求
       $.ajax({
