@@ -1,3 +1,8 @@
+<script src="/login/status"></script>
+<script>
+  // 如果用户没有登录，跳转到登录页面
+  if (!isLogin) location.href = 'login.html';
+  </script>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -17,7 +22,7 @@
       <button class="btn btn-default navbar-btn fa fa-bars"></button>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="profile.html"><i class="fa fa-user"></i>个人中心</a></li>
-        <li><a href="login.html"><i class="fa fa-sign-out"></i>退出</a></li>
+        <li><a href="javascript:;" id="logout"><i class="fa fa-sign-out"></i>退出</a></li>
       </ul>
     </nav>
     <div class="container-fluid">
@@ -47,7 +52,7 @@
 
   <div class="aside">
     <div class="profile">
-      <img class="avatar" src="../uploads/avatar.jpg">
+      <img class="avatar" src="../uploads/c758f46a6f8807534c658d224f9929f8.jpg">
       <h3 class="name">Coder</h3>
     </div>
     <ul class="nav">
@@ -85,5 +90,8 @@
   <script src="../assets/vendors/jquery/jquery.js"></script>
   <script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script>NProgress.done()</script>
+  <script src="../assets/js/common.js">
+    
+  </script>
 </body>
 </html>
