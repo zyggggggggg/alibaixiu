@@ -13,3 +13,14 @@ $('#logout').on('click', function() {
       })
     }
   })
+
+  // 向服务器发送请求，查询当前用户的的登录信息
+  $.ajax({
+    type: 'get',
+    url: '/users/' + userId,
+    success: function(response) {
+      console.log(response)
+      $('.avatar').prop('src', response.avatar)
+      $('.name').html(response.nickName)
+    }
+  })
